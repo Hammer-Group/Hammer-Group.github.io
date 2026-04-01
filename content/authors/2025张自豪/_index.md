@@ -1,4 +1,3 @@
-
 ---
 # Display name
 title: 张自豪
@@ -13,4 +12,5 @@ authors:
 
 user_groups:
   - 2025级学生
+
 ---
