@@ -6,32 +6,39 @@
     <h1>{{ .Title }}</h1>
   </header>
 
-  {{/* ===== 1️⃣ 先收集所有 group + project 页面 ===== */}}
-  {{ $all := slice }}
+  {{/* ===== 1?? 收集所有页面，并分拣为“置顶”和“普通”两组 ===== */}}
+  {{ $pinned := slice }}
+  {{ $normal := slice }}
 
   {{ range .Site.RegularPages }}
-    {{ if or (strings.HasPrefix .File.Path "photos/group/")
-             (strings.HasPrefix .File.Path "photos/projects/") }}
-        {{ $all = $all | append . }}
+    {{ if or (in .RelPermalink "/photos/group/") (in .RelPermalink "/photos/projects/") }}
+        {{/* 如果文章里写了 pinned: true，就放进置顶组，否则放进普通组 */}}
+        {{ if eq .Params.pinned true }}
+          {{ $pinned = $pinned | append . }}
+        {{ else }}
+          {{ $normal = $normal | append . }}
+        {{ end }}
     {{ end }}
   {{ end }}
 
-  {{/* ===== 2️⃣ 按时间倒序排序 ===== */}}
-  {{ $all = $all.ByDate.Reverse }}
-
-  {{/* ===== 3️⃣ 统一时间线渲染 ===== */}}
   <section class="timeline-section">
 
-    {{ range $all }}
-
-      {{ if strings.HasPrefix .File.Path "photos/group/" }}
+    {{/* ===== 2?? 优先渲染：置顶内容（按时间倒序） ===== */}}
+    {{ range sort $pinned "Date" "desc" }}
+      {{ if in .RelPermalink "/photos/group/" }}
         {{ partial "photo-grid.html" . }}
-
-      {{ else if strings.HasPrefix .File.Path "photos/projects/" }}
+      {{ else if in .RelPermalink "/photos/projects/" }}
         {{ partial "project-block.html" . }}
-
       {{ end }}
+    {{ end }}
 
+    {{/* ===== 3?? 随后渲染：普通内容（按时间倒序） ===== */}}
+    {{ range sort $normal "Date" "desc" }}
+      {{ if in .RelPermalink "/photos/group/" }}
+        {{ partial "photo-grid.html" . }}
+      {{ else if in .RelPermalink "/photos/projects/" }}
+        {{ partial "project-block.html" . }}
+      {{ end }}
     {{ end }}
 
   </section>
