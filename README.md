@@ -1,4 +1,4 @@
-本项目为武汉理工大学自动化学院田猛和董政呈老师课题组网站
+**本项目为武汉理工大学自动化学院田猛和董政呈老师课题组网站**
 
 # [Hugo Academic CV Theme](https://github.com/HugoBlox/theme-academic-cv)
 
