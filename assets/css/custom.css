@@ -335,3 +335,8 @@ time.text-sm {
   color: #0b57d0 !important;
   text-decoration-color: #0b57d0 !important;
 }
+.visit-counter {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-top: 1rem;
+}
