@@ -2,15 +2,67 @@
   {{ with site.Copyright }}{{ replace . "{year}" now.Year | markdownify }} {{ end }}
 </p>
 
-<!-- 下面是我们即将添加的计数器代码 -->
-<!-- 请确保 src 里面有 https: -->
-<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- 不蒜子样式美化 -->
+<style>
+  .busuanzi-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+    font-size: 0.85rem;
+    /* 使用半透明颜色，使其在明暗主题下都能自然融入 */
+    color: inherit; 
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+  }
+  .busuanzi-container:hover {
+    opacity: 1; /* 鼠标悬浮时变亮 */
+  }
+  .busuanzi-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .busuanzi-item svg {
+    width: 16px;
+    height: 16px;
+  }
+  .busuanzi-value {
+    font-weight: 600;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; /* 让数字显示更整齐 */
+  }
+  .busuanzi-divider {
+    opacity: 0.3;
+    font-size: 0.8rem;
+  }
+</style>
 
-<p class="powered-by">
-  <span id="busuanzi_container_site_pv">
-    本站总访问量 <span id="busuanzi_value_site_pv"></span> 次
+<!-- 不蒜子 HTML 结构 -->
+<div class="busuanzi-container">
+  <!-- 访问量 (PV) -->
+  <span id="busuanzi_container_site_pv" class="busuanzi-item" style="display: flex !important;">
+    <!-- 眼睛图标 -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+      <circle cx="12" cy="12" r="3"></circle>
+    </svg>
+    <span>访问量 <span id="busuanzi_value_site_pv" class="busuanzi-value">...</span> 次</span>
   </span>
-  <span id="busuanzi_container_site_uv">
-    | 总访客数 <span id="busuanzi_value_site_uv"></span> 人
+
+  <span class="busuanzi-divider">|</span>
+
+  <!-- 访客数 (UV) -->
+  <span id="busuanzi_container_site_uv" class="busuanzi-item" style="display: flex !important;">
+    <!-- 用户图标 -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+      <circle cx="12" cy="7" r="4"></circle>
+    </svg>
+    <span>访客数 <span id="busuanzi_value_site_uv" class="busuanzi-value">...</span> 人</span>
   </span>
-</p>
+</div>
+
+<!-- 不蒜子核心脚本 -->
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
