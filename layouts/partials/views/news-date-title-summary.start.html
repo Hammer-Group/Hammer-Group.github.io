@@ -1,0 +1,120 @@
+<style>
+  .news-list-wrap {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 24px;
+    box-sizing: border-box;
+  }
+
+  .news-list-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .news-list-card {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    background: #ffffff;
+    border: 1px solid #eef2f7;
+    border-radius: 20px;
+    padding: 24px 28px;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+  }
+
+  .news-list-date {
+    flex: 0 0 135px;
+    width: 135px;
+    font-size: 15px;
+    line-height: 1.6;
+    font-weight: 700;
+    color: #667085;
+    white-space: nowrap;
+    padding-top: 2px;
+  }
+
+  .news-list-body {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .news-list-title {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.65;
+    font-weight: 700;
+    color: #0f172a;
+  }
+
+  .news-list-title a {
+    color: #0f172a;
+    text-decoration: none;
+  }
+
+  .news-list-title a:hover {
+    color: #0f766e;
+  }
+
+  .news-list-summary {
+    margin-top: 8px;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #667085;
+  }
+
+  .news-list-link {
+    margin-top: 8px;
+  }
+
+  .news-list-link a {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #0f766e;
+    text-decoration: none;
+  }
+
+  .news-list-link a:hover {
+    color: #0b5f5a;
+  }
+
+  @media (max-width: 900px) {
+    .news-list-wrap {
+      max-width: 100%;
+      padding: 0 16px;
+    }
+
+    .news-list-card {
+      flex-direction: column;
+      gap: 10px;
+      padding: 20px 18px;
+      border-radius: 16px;
+    }
+
+    .news-list-date {
+      flex: none;
+      width: auto;
+      font-size: 14px;
+    }
+
+    .news-list-title {
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .news-list-summary {
+      font-size: 14px;
+      line-height: 1.75;
+    }
+
+    .news-list-link {
+      margin-top: 5px;
+    }
+  }
+</style>
+
+<div class="news-list-wrap">
+  <div class="news-list-stack">

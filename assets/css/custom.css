@@ -335,3 +335,375 @@ time.text-sm {
   color: #0b57d0 !important;
   text-decoration-color: #0b57d0 !important;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   首页近期新闻：最终微调版
+   1) 缩小标题和列表距离
+   2) 放宽新闻列表宽度
+   3) 日期和标题上下居中
+   ========================= */
+
+/* 让整个新闻区更宽，减少左右大留白 */
+.news-cards .max-w-3xl,
+.news-cards .mx-auto.max-w-3xl {
+  max-width: 900px !important;
+  width: min(88vw, 900px) !important;
+}
+
+/* 缩小“近期新闻”标题与下面列表的距离 */
+.news-cards h1,
+.news-cards h2,
+.news-cards .section-heading,
+.news-cards .home-section-title {
+  margin-bottom: 0.6rem !important;
+}
+
+/* 如果标题下面还有一个包裹层自带大 margin，也一起压缩 */
+.news-cards .w-fit,
+.news-cards .mt-16,
+.news-cards .sm\:mt-20 {
+  margin-top: 0.4rem !important;
+  margin-bottom: 0.4rem !important;
+}
+
+/* 新闻条目之间的距离 */
+.news-cards article + article,
+.news-cards .stream-item + .stream-item,
+.news-cards .view-list-item + .view-list-item,
+.news-cards li + li {
+  margin-top: 0.9rem !important;
+}
+
+/* 每条新闻卡片 */
+.news-cards article,
+.news-cards .stream-item,
+.news-cards .view-list-item,
+.news-cards li {
+  display: flex !important;
+  align-items: center !important;   /* 核心：上下居中 */
+  gap: 2rem !important;
+
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 18px;
+  padding: 1.1rem 1.35rem !important;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.06);
+
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+/* 悬停上浮 */
+.news-cards article:hover,
+.news-cards .stream-item:hover,
+.news-cards .view-list-item:hover,
+.news-cards li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.10);
+  border-color: rgba(37, 99, 235, 0.18);
+}
+
+/* 左侧日期列：固定宽度，并垂直居中 */
+.news-cards article > :first-child,
+.news-cards .stream-item > :first-child,
+.news-cards .view-list-item > :first-child,
+.news-cards li > :first-child {
+  flex: 0 0 130px !important;
+  width: 130px !important;
+
+  display: flex !important;
+  align-items: center !important;   /* 日期上下居中 */
+  justify-content: flex-start !important;
+
+  color: #64748b;
+  font-size: 0.98rem;
+  line-height: 1.5;
+}
+
+/* 右侧正文区域：整体上下居中 */
+.news-cards article > :last-child,
+.news-cards .stream-item > :last-child,
+.news-cards .view-list-item > :last-child,
+.news-cards li > :last-child {
+  flex: 1 1 auto !important;
+
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;   /* 核心：标题内容上下居中 */
+  min-height: 84px;
+}
+
+/* 右侧标题 */
+.news-cards h3,
+.news-cards h2 {
+  margin: 0 0 0.25rem 0 !important;
+  line-height: 1.5;
+}
+
+/* 正文摘要/说明 */
+.news-cards p {
+  margin-top: 0.2rem !important;
+  margin-bottom: 0 !important;
+  color: #475569;
+  line-height: 1.65;
+}
+
+/* 时间文字样式 */
+.news-cards time {
+  display: block;
+  margin: 0 !important;
+  color: #64748b;
+  font-size: 0.98rem;
+}
+
+/* 链接去下划线 */
+.news-cards a {
+  text-decoration: none !important;
+}
+
+.news-cards a:hover {
+  text-decoration: none !important;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+  .news-cards .max-w-3xl,
+  .news-cards .mx-auto.max-w-3xl {
+    width: min(96vw, 96vw) !important;
+    max-width: 96vw !important;
+  }
+
+  .news-cards article,
+  .news-cards .stream-item,
+  .news-cards .view-list-item,
+  .news-cards li {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.5rem !important;
+    padding: 0.95rem 1rem !important;
+  }
+
+  .news-cards article > :first-child,
+  .news-cards .stream-item > :first-child,
+  .news-cards .view-list-item > :first-child,
+  .news-cards li > :first-child {
+    width: auto !important;
+    flex: none !important;
+  }
+
+  .news-cards article > :last-child,
+  .news-cards .stream-item > :last-child,
+  .news-cards .view-list-item > :last-child,
+  .news-cards li > :last-child {
+    min-height: auto;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   首页顶部右侧简介区加宽
+   ========================= */
+
+/* 1. 去掉右侧简介外层 max-w-prose 的宽度限制 */
+.flex-auto.max-w-prose.md\:mt-12 {
+  max-width: 40% !important;
+  width: 40% !important;
+  flex: 0 0 40% !important;
+}
+
+/* 2. 去掉 prose 自身可能附带的宽度限制 */
+.flex-auto.max-w-prose.md\:mt-12 .prose {
+  max-width: none !important;
+  width: 100% !important;
+}
+
+/* 3. 你自己写的 bio-text 也撑满 */
+.flex-auto.max-w-prose.md\:mt-12 .bio-text {
+  width: 100% !important;
+  max-width: none !important;
+}
+
+/* 4. 最里面那张玻璃卡片也撑满 */
+.flex-auto.max-w-prose.md\:mt-12 .bio-text > div {
+  width: 100% !important;
+  max-width: none !important;
+  box-sizing: border-box !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.navbar {
+  min-height: 74px !important;
+  background: rgba(255,255,255,0.88) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+}
+
+.navbar-nav .nav-link {
+  position: relative;
+  font-size: 1.18rem !important;
+  font-weight: 700 !important;
+  color: #0f172a !important;
+  padding: 0.6rem 1rem !important;
+  transition: all 0.25s ease !important;
+}
+
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0.1rem;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #2563eb, #38bdf8);
+  border-radius: 999px;
+  transform: translateX(-50%);
+  transition: width 0.25s ease;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+  width: 60%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   左上角站点标题优化
+   ========================= */
+
+   .navbar-brand {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+  
+    font-size: 1.55rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.4px !important;
+    color: #0f172a !important;
+    line-height: 1.1 !important;
+    transition: all 0.25s ease !important;
+  }
+  
+  /* 悬停更有质感 */
+  .navbar-brand:hover {
+    color: #1d4ed8 !important;
+    transform: translateY(-1px);
+    text-decoration: none !important;
+  }
+  
+  /* 如果左侧有 logo / 图标 */
+  .navbar-brand img,
+  .navbar-brand svg {
+    height: 30px !important;
+    width: auto !important;
+  }
+  
+  /* 移动端略缩小 */
+  @media (max-width: 992px) {
+    .navbar-brand {
+      font-size: 1.28rem !important;
+    }
+  
+    .navbar-brand img,
+    .navbar-brand svg {
+      height: 24px !important;
+    }
+  }
+
+
+  .navbar-brand {
+    font-size: 1.55rem !important;
+    font-weight: 800 !important;
+    background: linear-gradient(90deg, #0f172a, #1d4ed8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .news-title-icon {
+    display: inline-block;
+    margin-right: 8px;
+    font-size: 1em;
+    line-height: 1;
+    vertical-align: -0.05em;
+  }
+
+  .news-inline-icon {
+    display: inline-block;
+    margin-right: 0.35em;
+    line-height: 1;
+    vertical-align: -0.04em;
+  }
+
+
+
+
+
+

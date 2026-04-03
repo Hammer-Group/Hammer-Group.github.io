@@ -25,7 +25,7 @@ sections:
       offset: 0
       order: desc
     design:
-      view: date-title-summary
+      view: news-date-title-summary
       spacing:
         padding: [4, 0, 0, 0]
 ---

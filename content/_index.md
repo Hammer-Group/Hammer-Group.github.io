@@ -6,7 +6,7 @@ type: landing
 
 design:
   # Default section spacing
-  spacing: "6rem"
+  spacing: "3rem"
 
 sections:
   - block: resume-biography-3
@@ -15,7 +15,9 @@ sections:
       username: admin
       text: ""
     design:
-      css_class: ""
+      css_class: home-here-wide
+      spacing:
+        padding: ['10px', '0', '40px', '0']
       background:
         color: black
         image:
@@ -64,9 +66,10 @@ sections:
     design:
       # Choose a layout view
       view: date-title-summary
+      css_class: news-cards
       # Reduce spacing
       spacing:
-        padding: [4, 0, 0, 0]
+        padding: ['4rem', '0', '0', '0']
   - block: cta-card
     demo: true # Only display this section in the Hugo Blox Builder demo site
     content:

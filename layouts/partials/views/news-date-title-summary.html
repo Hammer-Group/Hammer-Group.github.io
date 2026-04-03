@@ -1,0 +1,45 @@
+<article class="news-list-card">
+  <div class="news-list-date">
+    {{ with .item.Date }}{{ .Format "2006-01-02" }}{{ end }}
+  </div>
+
+  <div class="news-list-body">
+    {{ $title := .item.Title }}
+    {{ $titleLower := lower $title }}
+    {{ $newsType := .item.Params.news_type }}
+
+    <h2 class="news-list-title">
+      <a href="{{ .item.RelPermalink }}">
+        {{ if eq $newsType "congrats" }}
+          <span class="news-title-icon" aria-hidden="true">🎆</span>
+        {{ else if eq $newsType "award" }}
+          <span class="news-title-icon" aria-hidden="true">🏆</span>
+        {{ else if eq $newsType "paper" }}
+          <span class="news-title-icon" aria-hidden="true">📄</span>
+        {{ else if eq $newsType "event" }}
+          <span class="news-title-icon" aria-hidden="true">📢</span>
+        {{ else if or (in $titleLower "恭喜") (in $titleLower "祝贺") }}
+          <span class="news-title-icon" aria-hidden="true">🎆</span>
+        {{ else if in $titleLower "获奖" }}
+          <span class="news-title-icon" aria-hidden="true">🏆</span>
+        {{ else if or (in $titleLower "论文") (in $titleLower "发表") (in $titleLower "录用") }}
+          <span class="news-title-icon" aria-hidden="true">📄</span>
+        {{ else if or (in $titleLower "活动") (in $titleLower "会议") (in $titleLower "讲座") (in $titleLower "报告") }}
+          <span class="news-title-icon" aria-hidden="true">📢</span>
+        {{ end }}
+        {{ .item.Title }}
+      </a>
+    </h2>
+
+    {{ $summary := .item.Params.summary | default .item.Summary }}
+    {{ with $summary }}
+      <div class="news-list-summary">
+        {{ . }}
+      </div>
+    {{ end }}
+
+    <div class="news-list-link">
+      <a href="{{ .item.RelPermalink }}">查看详情 →</a>
+    </div>
+  </div>
+</article>
