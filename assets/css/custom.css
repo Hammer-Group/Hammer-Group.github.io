@@ -728,3 +728,107 @@ time.text-sm {
     font-size: 1.55rem;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========================================
+   手机端首页简介区：强制修复补丁
+   必须放在 custom.css 最末尾
+   ======================================== */
+   @media screen and (max-width: 768px) {
+    /* 1) 首页个人简介外层容器，不再限制宽度 */
+    .biography-wrapper,
+    .biography-wrapper .container,
+    .biography-wrapper .row,
+    .biography-wrapper .col-12,
+    .biography-wrapper .col-lg-4,
+    .biography-wrapper .col-lg-8,
+    .biography-wrapper .flex-auto,
+    .biography-wrapper .max-w-prose,
+    .biography-wrapper .mx-auto {
+      width: 100% !important;
+      max-width: 100% !important;
+      min-width: 0 !important;
+      box-sizing: border-box !important;
+    }
+  
+    /* 2) 个人简介区如果用了 flex 横排，手机端强制改成竖排 */
+    .biography-wrapper .lg\:flex-row,
+    .biography-wrapper .md\:flex-row,
+    .biography-wrapper .sm\:flex-row,
+    .biography-wrapper [class*="flex-row"] {
+      flex-direction: column !important;
+    }
+  
+    /* 3) 关键：右侧 bio 简介文本区强制全宽 */
+    .biography-wrapper .flex-auto.max-w-prose,
+    .biography-wrapper .flex-auto.max-w-prose.md\:mt-12,
+    .biography-wrapper .prose,
+    .biography-wrapper .bio-text,
+    .biography-wrapper .bio-text > div {
+      width: 100% !important;
+      max-width: 100% !important;
+      min-width: 0 !important;
+      flex: 0 0 100% !important;
+      box-sizing: border-box !important;
+    }
+  
+    /* 4) 把卡片内边距改成手机端友好 */
+    .biography-wrapper .bio-text > div,
+    .biography-wrapper .prose {
+      padding-left: 16px !important;
+      padding-right: 16px !important;
+    }
+  
+    /* 5) 避免中文被挤成很窄的竖条 */
+    .biography-wrapper p,
+    .biography-wrapper li,
+    .biography-wrapper .prose p,
+    .biography-wrapper .prose li,
+    .biography-wrapper .bio-text p,
+    .biography-wrapper .bio-text li {
+      white-space: normal !important;
+      word-break: break-word !important;
+      overflow-wrap: anywhere !important;
+      line-height: 1.8 !important;
+    }
+  
+    /* 6) 如果头像区和文字区还在同一行，强制都独占一行 */
+    .biography-wrapper .avatar,
+    .biography-wrapper .flex-auto.max-w-prose,
+    .biography-wrapper .col-12.col-lg-4,
+    .biography-wrapper .col-12.col-lg-8 {
+      display: block !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      flex: 0 0 100% !important;
+    }
+  
+    /* 7) 修复你之前 65ch 容器可能带来的窄宽度问题 */
+    .flex.flex-col.items-center > .container.max-w-\[65ch\] {
+      width: 100% !important;
+      max-width: 100% !important;
+      padding-left: 16px !important;
+      padding-right: 16px !important;
+      box-sizing: border-box !important;
+    }
+  }
