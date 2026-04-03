@@ -526,33 +526,64 @@ time.text-sm {
 
 
 /* =========================
-   首页顶部右侧简介区加宽
+   首页顶部右侧简介区宽度修复
+   桌面端加宽，手机端恢复全宽
    ========================= */
 
-/* 1. 去掉右侧简介外层 max-w-prose 的宽度限制 */
-.flex-auto.max-w-prose.md\:mt-12 {
-  max-width: 40% !important;
-  width: 40% !important;
-  flex: 0 0 40% !important;
+/* 桌面端 */
+@media (min-width: 768px) {
+  .flex-auto.max-w-prose.md\:mt-12 {
+    max-width: 40% !important;
+    width: 40% !important;
+    flex: 0 0 40% !important;
+  }
+
+  .flex-auto.max-w-prose.md\:mt-12 .prose {
+    max-width: none !important;
+    width: 100% !important;
+  }
+
+  .flex-auto.max-w-prose.md\:mt-12 .bio-text {
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  .flex-auto.max-w-prose.md\:mt-12 .bio-text > div {
+    width: 100% !important;
+    max-width: none !important;
+    box-sizing: border-box !important;
+  }
 }
 
-/* 2. 去掉 prose 自身可能附带的宽度限制 */
-.flex-auto.max-w-prose.md\:mt-12 .prose {
-  max-width: none !important;
-  width: 100% !important;
-}
+/* 手机端 */
+@media (max-width: 767.98px) {
+  .flex-auto.max-w-prose.md\:mt-12 {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+    margin-top: 1.5rem !important;
+  }
 
-/* 3. 你自己写的 bio-text 也撑满 */
-.flex-auto.max-w-prose.md\:mt-12 .bio-text {
-  width: 100% !important;
-  max-width: none !important;
-}
+  .flex-auto.max-w-prose.md\:mt-12 .prose,
+  .flex-auto.max-w-prose.md\:mt-12 .bio-text,
+  .flex-auto.max-w-prose.md\:mt-12 .bio-text > div {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
 
-/* 4. 最里面那张玻璃卡片也撑满 */
-.flex-auto.max-w-prose.md\:mt-12 .bio-text > div {
-  width: 100% !important;
-  max-width: none !important;
-  box-sizing: border-box !important;
+  .flex-auto.max-w-prose.md\:mt-12 .bio-text > div {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .flex-auto.max-w-prose.md\:mt-12 p,
+  .flex-auto.max-w-prose.md\:mt-12 li {
+    white-space: normal !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    line-height: 1.8 !important;
+  }
 }
 
 
