@@ -10,7 +10,7 @@ last_name: 猛
 superuser: true
 
 # Role/position
-role: 副教授，硕导
+role: 副教授，系副主任
 
 # Organizations/Affiliations
 organizations:
