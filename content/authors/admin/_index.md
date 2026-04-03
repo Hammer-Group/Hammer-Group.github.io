@@ -116,6 +116,9 @@ awards:
       Object-oriented programming (OOP) lets you specify relationships between functions and the objects that they can act on, helping you manage complexity in your code. This is an intermediate level course, providing an introduction to OOP, using the S3 and R6 systems. S3 is a great day-to-day R programming tool that simplifies some of the functions that you write. R6 is especially useful for industry-specific analyses, working with web APIs, and building GUIs.
 ---
 
+<div style="font-size: 17px; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-radius: 12px; padding: 25px; color: #000; font-weight: 600; line-height: 1.8; box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); border: 1px solid rgba(255, 255, 255, 0.3);">
+
+
 **铁锤子课题组**依托武汉理工大学自动化学院和智能控制与智能系统研究中心，秉承<a href="https://www.dswxyjy.org.cn/n1/2023/1106/c244516-40111236.html" 
    class="research-link" 
    target="_blank">
@@ -133,3 +136,25 @@ awards:
 （4）<a href="uploads/人工智能方法应用.pdf" class="research-link" target="_blank">
 <strong>人工智能方法应用</strong>
 </a>，主要研究内容包括：人工智能在电力系统和无人机等领域部署应用。<br>
+
+
+
+
+
+
+
+
+
+<!-- 添加以下样式代码以实现头像和文字的垂直居中 -->
+<style>
+  /* 兼容基于 Bootstrap 的旧版 Hugo 主题 */
+  .row {
+    align-items: center !important;
+  }
+  
+  /* 兼容基于 Tailwind CSS 的新版 Hugo Blox 主题 */
+  .flex.flex-col.md\:flex-row,
+  .flex.flex-col.lg\:flex-row {
+    align-items: center !important;
+  }
+</style>
