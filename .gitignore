@@ -1,0 +1,7 @@
+# 自动生成的文件
+public
+resources
+.hugo_build.lock
+
+# Hugo 可执行文件
+hugo.exe
