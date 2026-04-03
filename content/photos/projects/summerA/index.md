@@ -5,4 +5,6 @@ pinned: true
 videos:
   - type: local
     src: 氢动力无人机试飞.mp4
+  - type: local
+    src: 氢燃料电池.mp4
 ---
