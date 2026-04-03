@@ -1,25 +1,18 @@
 ---
-title: '恭喜刘鑫等同学在期刊Reliability Engineering & System Safety发表论文 "Multi-scenario robust stochastic programming based distributed energy resources allocation in distribution networks: Balancing economic efficiency and resilience"'
-summary: |
-  <a href="https://www.sciencedirect.com/science/article/abs/pii/S0951832025009494" 
-     target="_blank" rel="noopener noreferrer"
-     style="color:#0066cc; text-decoration:none;"
-     onmouseover="this.style.color='#004c99'"
-     onmouseout="this.style.color='#0066cc'">
-    🔗 点击查看论文
-  </a>
+title: '恭喜刘鑫等同学在期刊 Reliability Engineering & System Safety 发表论文 "Multi-scenario robust stochastic programming based distributed energy resources allocation in distribution networks: Balancing economic efficiency and resilience"'
+summary: '该论文发表于 Reliability Engineering & System Safety，围绕配电网中分布式能源配置问题，研究了兼顾经济性与韧性的多场景鲁棒随机优化方法。'
 date: 2025-09-22
-# Featured image
-# Place an image named `featured.jpg/png` in this page's folder and customize its options here.
-#image:
-#  caption: 'Image credit: [**Unsplash**](https://unsplash.com)'
 
 authors:
   - admin
   - Ted
-disable_link: true
+
+disable_link: false
+
 tags:
   - Academic
   - Hugo Blox
   - Markdown
 ---
+
+[🔗 点击查看论文](https://www.sciencedirect.com/science/article/abs/pii/S0951832025009494)
