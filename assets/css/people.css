@@ -2,7 +2,7 @@
  *  People Widget (for Hugo Blox)
  **************************************************/
 
-.people-widget {
+ .people-widget {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,15 +10,16 @@
   text-align: center;
   width: 100%;
   margin: 0 auto;
-  padding: 2rem 1rem;
+  padding: 2.5rem 1rem;
 }
 
 /* Section title (“Meet the Team”) */
 .people-widget .section-heading h1 {
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 1rem;
   text-align: center;
+  color: #111827;
 }
 
 /* Subtitle (if any) */
@@ -27,29 +28,44 @@
   color: #666;
 }
 
-/* User group (Researchers / Visitors) */
+/* User group row */
 .user-group-row {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 }
 
 /* Group title */
 .user-group-row h2 {
-  font-size: 1.4rem;
-  font-weight: 500;
-  margin-bottom: 1.5rem;
+  position: relative;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: 0.02em;
+  color: #1f2937;
+  margin: 0 0 2rem;
   text-align: center;
+  font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif;
 }
 
-/* Container for people (flex layout) */
+.user-group-row h2::after {
+  content: "";
+  display: block;
+  width: 54px;
+  height: 3px;
+  margin: 12px auto 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #2563eb, #60a5fa);
+}
+
+/* Container for people */
 .user-group-row .d-flex {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem; /* space between people */
+  gap: 2rem;
   width: 100%;
   max-width: 1200px;
 }
@@ -95,11 +111,29 @@
   text-align: center;
 }
 
-/* Interests (if displayed) */
+/* Interests */
 .people-interests {
   font-size: 0.8rem;
   color: #666;
   margin-top: 0.3rem;
+}
+
+/* CV Download Link */
+.cv-link {
+  margin-top: 0.5rem;
+}
+
+.cv-link a {
+  display: inline-block;
+  color: #007bff;
+  text-decoration: underline;
+  font-size: 0.85rem;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.cv-link a:hover {
+  color: #0056b3;
+  text-decoration: none;
 }
 
 /* Responsive design */
@@ -107,9 +141,14 @@
   .people-person {
     width: 45%;
   }
+
   .avatar {
     width: 130px;
     height: 130px;
+  }
+
+  .user-group-row h2 {
+    font-size: 1.7rem;
   }
 }
 
@@ -117,33 +156,23 @@
   .people-person {
     width: 100%;
   }
+
   .avatar {
     width: 120px;
     height: 120px;
   }
+
   .user-group-row h2 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    margin-bottom: 1.4rem;
   }
+
+  .user-group-row h2::after {
+    width: 40px;
+    margin-top: 10px;
+  }
+
   .portrait-title h2 {
     font-size: 0.95rem;
   }
-}
-/* ===========================
-   CV Download Link
-=========================== */
-.cv-link {
-  margin-top: 0.5rem;
-}
-
-.cv-link a {
-  display: inline-block;
-  color: #007bff;  /* 蓝色 */
-  text-decoration: underline;
-  font-size: 0.85rem;
-  transition: color 0.2s ease, text-decoration 0.2s ease;
-}
-
-.cv-link a:hover {
-  color: #0056b3;  /* 深蓝色 */
-  text-decoration: none;
 }

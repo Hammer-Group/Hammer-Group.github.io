@@ -13,8 +13,8 @@ marketing:
   seo:
     site_type: Person
     local_business_type: ''
-    org_name: ''
-    description: 'The highly-customizable Hugo Academic theme powered by Hugo Blox Builder. Easily create your personal academic website.'
+    org_name: '铁锤子课题组'
+    description: '铁锤子课题组官网，展示课题组成员、研究方向、科研成果、新闻动态与招生信息。'
     twitter: 'GetResearchDev'
   analytics:
     google_analytics: ''
@@ -32,8 +32,8 @@ header:
     enable: true
     blox: "navbar"
     fixed_to_top: true
-    show_search: true
-    show_theme_chooser: true
+    show_search: false
+    show_theme_chooser: false
     logo:
       filename: "logo.png"
       text: "铁锤子课题组"
@@ -41,7 +41,7 @@ header:
 # Site footer
 footer:
   copyright:
-    notice: ''
+    notice: '© 2026 铁锤子课题组. All Rights Reserved.'
     license:
       enable: false
       allow_derivatives: false
@@ -56,7 +56,7 @@ locale:
 # Site features
 features:
   math:
-    enable: false
+    enable: true
   privacy_pack:
     enable: false
 
