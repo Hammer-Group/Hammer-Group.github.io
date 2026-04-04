@@ -1197,3 +1197,234 @@ time.text-sm {
       font-size: 1.06rem !important;
     }
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* =========================
+     宣传板
+     ========================= */
+     :root {
+      --main-content-width: 980px;
+      --board-width: 255px;
+      --board-gap: 50px;
+      --board-side-extra: 52px;
+      --board-top: 570px;
+    }
+    
+    .floating-board {
+      position: fixed !important;
+      top: var(--board-top) !important;
+      width: var(--board-width) !important;
+      padding: 20px 18px 18px !important;
+      box-sizing: border-box !important;
+      z-index: 9999 !important;
+    
+      background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%) !important;
+      border: 1px solid rgba(15, 23, 42, 0.06) !important;
+      border-radius: 22px !important;
+    
+      box-shadow:
+        0 22px 50px rgba(15, 23, 42, 0.08),
+        0 8px 20px rgba(15, 23, 42, 0.05),
+        0 1px 2px rgba(15, 23, 42, 0.04) !important;
+    
+      backdrop-filter: blur(6px) !important;
+      -webkit-backdrop-filter: blur(6px) !important;
+    
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease !important;
+    
+      overflow: hidden !important;
+    }
+    
+    .floating-board::before {
+      content: "" !important;
+      position: absolute !important;
+      inset: 0 !important;
+      border-radius: inherit !important;
+      pointer-events: none !important;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.75) 0%, rgba(255,255,255,0.18) 18%, rgba(255,255,255,0) 42%) !important;
+    }
+    
+    .floating-board::after {
+      content: "" !important;
+      position: absolute !important;
+      left: 14px !important;
+      right: 14px !important;
+      top: 0 !important;
+      height: 1px !important;
+      background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.95), rgba(255,255,255,0)) !important;
+      pointer-events: none !important;
+    }
+    
+    .floating-board:hover {
+      transform: translateY(-4px) !important;
+      border-color: rgba(37, 99, 235, 0.10) !important;
+      box-shadow:
+        0 28px 60px rgba(15, 23, 42, 0.10),
+        0 12px 28px rgba(15, 23, 42, 0.07),
+        0 2px 6px rgba(15, 23, 42, 0.05) !important;
+    }
+    
+    .floating-board-left {
+      left: max(
+        8px,
+        calc(
+          50% - var(--main-content-width) / 2 - var(--board-width) - var(--board-gap) - var(--board-side-extra)
+        )
+      ) !important;
+    }
+    
+    .floating-board-right {
+      right: max(
+        8px,
+        calc(
+          50% - var(--main-content-width) / 2 - var(--board-width) - var(--board-gap) - var(--board-side-extra)
+        )
+      ) !important;
+    }
+    
+    .board-badge {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      margin-bottom: 14px !important;
+      padding: 6px 12px !important;
+      border-radius: 999px !important;
+    
+      font-size: 0.78rem !important;
+      font-weight: 700 !important;
+      line-height: 1 !important;
+      letter-spacing: 0.02em !important;
+    
+      color: #2563eb !important;
+      background: linear-gradient(180deg, rgba(59,130,246,0.14) 0%, rgba(37,99,235,0.08) 100%) !important;
+      border: 1px solid rgba(37, 99, 235, 0.08) !important;
+    }
+    
+    .floating-board h3 {
+      position: relative !important;
+      margin: 0 0 14px !important;
+      color: #0f172a !important;
+      font-size: 1.3rem !important;
+      font-weight: 800 !important;
+      line-height: 1.35 !important;
+      letter-spacing: -0.01em !important;
+    }
+    
+    .floating-board p {
+      position: relative !important;
+      margin: 0 0 12px !important;
+      color: #475569 !important;
+      font-size: 1rem !important;
+      font-weight: 500 !important;
+      line-height: 1.9 !important;
+      letter-spacing: 0 !important;
+    }
+    
+    .floating-board p:last-child {
+      margin-bottom: 0 !important;
+    }
+    
+    .floating-board strong {
+      color: #1e293b !important;
+      font-weight: 700 !important;
+    }
+    
+    .floating-board a {
+      color: #2563eb !important;
+      text-decoration: none !important;
+      font-weight: 600 !important;
+      word-break: break-word !important;
+      transition: color 0.2s ease !important;
+    }
+    
+    .floating-board a:hover {
+      color: #1d4ed8 !important;
+      text-decoration: underline !important;
+    }
+    
+    .floating-board .board-title-line {
+      display: block !important;
+      margin-bottom: 8px !important;
+      color: #0f172a !important;
+      font-size: 1.08rem !important;
+      font-weight: 700 !important;
+      line-height: 1.5 !important;
+    }
+    
+    .floating-board .board-note {
+      color: #64748b !important;
+      font-size: 0.94rem !important;
+      line-height: 1.85 !important;
+    }
+    
+    .dark .floating-board {
+      background: linear-gradient(180deg, #111827 0%, #0f172a 100%) !important;
+      border: 1px solid rgba(148, 163, 184, 0.14) !important;
+      box-shadow:
+        0 22px 50px rgba(0, 0, 0, 0.32),
+        0 8px 20px rgba(0, 0, 0, 0.20),
+        0 1px 2px rgba(0, 0, 0, 0.16) !important;
+    }
+    
+    .dark .floating-board::before {
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 18%, rgba(255,255,255,0) 42%) !important;
+    }
+    
+    .dark .floating-board h3,
+    .dark .floating-board .board-title-line,
+    .dark .floating-board strong {
+      color: #f8fafc !important;
+    }
+    
+    .dark .floating-board p {
+      color: #dbe4f0 !important;
+    }
+    
+    .dark .floating-board .board-note {
+      color: #cbd5e1 !important;
+    }
+    
+    .dark .floating-board a {
+      color: #93c5fd !important;
+    }
+    
+    .dark .board-badge {
+      color: #93c5fd !important;
+      background: linear-gradient(180deg, rgba(59,130,246,0.16) 0%, rgba(59,130,246,0.10) 100%) !important;
+      border-color: rgba(96, 165, 250, 0.16) !important;
+    }
+    
+    @media (max-width: 1500px) {
+      .floating-board {
+        display: none !important;
+      }
+    }
