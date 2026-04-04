@@ -13,10 +13,10 @@ main:
   - name: 研究成果
     url: /publications/
     weight: 12
-  - name: 项目
+  - name: 科研项目
     url: /project/
     weight: 13
-  - name: 团队成员
+  - name: 课题组成员
     url: /people/
     weight: 14
   - name: 课程教学

@@ -119,23 +119,24 @@ awards:
 <div style="font-size: 17px; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-radius: 12px; padding: 25px; color: #000; font-weight: 600; line-height: 1.8; box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); border: 1px solid rgba(255, 255, 255, 0.3);">
 
 
-**铁锤子课题组**依托武汉理工大学自动化学院和智能控制与智能系统研究中心，秉承<a href="https://www.dswxyjy.org.cn/n1/2023/1106/c244516-40111236.html" 
+<strong>铁锤子课题组<strong>依托<a href="http://sa.whut.edu.cn/">武汉理工大学自动化学院</a>
+智能控制与智能系统研究中心，秉承<a href="https://www.dswxyjy.org.cn/n1/2023/1106/c244516-40111236.html" 
    class="research-link" 
    target="_blank">
 <strong>钉钉子精神</strong>
-</a>，先后承担并完成国家级/省部级项目9项及多项企业项目，累计发表论文80多篇，省部级科技进步奖二等奖1项、科技进步三等奖1项，其他奖励多项。课题组目前主要有四个研究方向：<br>
+</a>，先后承担并完成国家级/省部级项目9项及企业横向项目多项，累计发表学术论文80余篇，申请/授权专利30余项，获得省部级科技进步奖二等奖1项、科技进步三等奖1项，其他科研奖励多项。课题组目前主要关注以下四个研究方向：<br>
 （1）<a href="uploads/电力系统数字化.pdf" class="research-link" target="_blank">
 <strong>电力系统数字化</strong>
-</a>，主要研究内容包括：电力系统信息网络安全与防护、电力设备/系统在线监测与故障诊断、电网工程数据智能处理与优化。<br>
+</a>，主要研究内容包括：电力系统信息网络安全与防护、电力设备和电力系统在线监测与故障诊断、电网工程数据智能处理与优化等。<br>
 （2）<a href="uploads/电力系统运行规划.pdf" class="research-link" target="_blank">
 <strong>电力系统规划运行</strong>
-</a>，主要研究内容包括：(信息)物理电力系统韧性提升、新型配用电系统/综合能源系统低碳规划运行。<br>
+</a>，主要研究内容包括：信息物理电力系统建模与电力系统韧性提升、新型配用电系统和综合能源系统低碳规划和优化运行等。<br>
 （3）<a href="uploads/无人机开发与应用.pdf" class="research-link" target="_blank">
 <strong>无人机开发与应用</strong>
-</a>，主要研究内容包括：大载重/长航时氢动力无人机平台、室内/室外无人机平台。<br>
+</a>，主要研究内容包括：大载重/长航时氢动力无人机平台开发、无人机路径规划和避障、无人机目标检测和平台开发等。<br>
 （4）<a href="uploads/人工智能方法应用.pdf" class="research-link" target="_blank">
 <strong>人工智能方法应用</strong>
-</a>，主要研究内容包括：人工智能在电力系统和无人机等领域部署应用。<br>
+</a>，主要研究内容包括：强化学习、深度学习、大模型等人工智能方法在电力系统和无人机等领域的研究和部署应用等。<br>
 
 
 

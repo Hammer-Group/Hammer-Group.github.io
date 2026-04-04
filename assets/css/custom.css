@@ -1227,11 +1227,11 @@ time.text-sm {
      宣传板
      ========================= */
      :root {
-      --main-content-width: 980px;
+      --main-content-width: 1200px;
       --board-width: 255px;
       --board-gap: 50px;
       --board-side-extra: 52px;
-      --board-top: 570px;
+      --board-top: 660px;
     }
     
     .floating-board {

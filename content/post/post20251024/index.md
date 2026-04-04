@@ -1,15 +1,14 @@
 ---
-title: 恭喜张啸宇同学获得研究生国家奖学金
-news_type: "congrats"
+title: 恭喜刘鑫同学获得研究生国家奖学金
 summary: "​"
-icon: ""
-date: 2024-11-06
+date: 2025-10-24
+publishDate: 2025-10-24
+lastmod: 2025-10-24
 link: ""
 disable_link: true
 authors:
   - admin
 tags:
-  - Hugo
-  - Hugo Blox
-  - Markdown
+  - 刘鑫
+  - 国家奖学金
 ---

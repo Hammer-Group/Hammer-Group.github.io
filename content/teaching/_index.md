@@ -1,4 +1,4 @@
 ---
-title: "课程教学"
+title: ""
 layout: "list"
 ---
