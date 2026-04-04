@@ -119,7 +119,7 @@ awards:
 <div style="font-size: 17px; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-radius: 12px; padding: 25px; color: #000; font-weight: 600; line-height: 1.8; box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); border: 1px solid rgba(255, 255, 255, 0.3);">
 
 
-<strong>铁锤子课题组<strong>依托<a href="http://sa.whut.edu.cn/">武汉理工大学自动化学院</a>
+<strong>铁锤子课题组</strong>依托<a href="http://sa.whut.edu.cn/">武汉理工大学自动化学院</a>
 智能控制与智能系统研究中心，秉承<a href="https://www.dswxyjy.org.cn/n1/2023/1106/c244516-40111236.html" 
    class="research-link" 
    target="_blank">
