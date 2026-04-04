@@ -159,6 +159,7 @@
       "dark:text-zinc-400",
       "dark:text-zinc-500",
       "dark:to-primary-900",
+      "duration-200",
       "duration-500",
       "featured-image",
       "featured-image-wrapper",
@@ -546,7 +547,6 @@
       "z-30"
     ],
     "ids": [
-      "-点击查看论文httpswwwsciencedirectcomsciencearticleabspiis0951832025009494",
       "Layer_1",
       "busuanzi_container_site_pv",
       "busuanzi_container_site_uv",
