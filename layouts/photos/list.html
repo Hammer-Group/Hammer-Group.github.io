@@ -1,48 +1,39 @@
 {{ define "main" }}
 
 <div class="photos-page">
+  {{ .Title }}
 
-  <header class="page-header">
-    <h1>{{ .Title }}</h1>
-  </header>
-
-  {{/* ===== 1?? 收集所有页面，并分拣为“置顶”和“普通”两组 ===== */}}
+  {{/* ===== 1. 收集所有页面，并分拣为“置顶”和“普通”两组 ===== */}}
   {{ $pinned := slice }}
   {{ $normal := slice }}
 
   {{ range .Site.RegularPages }}
     {{ if or (in .RelPermalink "/photos/group/") (in .RelPermalink "/photos/projects/") }}
-        {{/* 如果文章里写了 pinned: true，就放进置顶组，否则放进普通组 */}}
-        {{ if eq .Params.pinned true }}
-          {{ $pinned = $pinned | append . }}
-        {{ else }}
-          {{ $normal = $normal | append . }}
-        {{ end }}
+      {{ if eq .Params.pinned true }}
+        {{ $pinned = $pinned | append . }}
+      {{ else }}
+        {{ $normal = $normal | append . }}
+      {{ end }}
     {{ end }}
   {{ end }}
 
-  <section class="timeline-section">
-
-    {{/* ===== 2?? 优先渲染：置顶内容（按时间倒序） ===== */}}
-    {{ range sort $pinned "Date" "desc" }}
-      {{ if in .RelPermalink "/photos/group/" }}
-        {{ partial "photo-grid.html" . }}
-      {{ else if in .RelPermalink "/photos/projects/" }}
-        {{ partial "project-block.html" . }}
-      {{ end }}
+  {{/* ===== 2. 优先渲染：置顶内容（按时间倒序） ===== */}}
+  {{ range sort $pinned "Date" "desc" }}
+    {{ if in .RelPermalink "/photos/group/" }}
+      {{ partial "photo-grid.html" . }}
+    {{ else if in .RelPermalink "/photos/projects/" }}
+      {{ partial "project-block.html" . }}
     {{ end }}
+  {{ end }}
 
-    {{/* ===== 3?? 随后渲染：普通内容（按时间倒序） ===== */}}
-    {{ range sort $normal "Date" "desc" }}
-      {{ if in .RelPermalink "/photos/group/" }}
-        {{ partial "photo-grid.html" . }}
-      {{ else if in .RelPermalink "/photos/projects/" }}
-        {{ partial "project-block.html" . }}
-      {{ end }}
+  {{/* ===== 3. 随后渲染：普通内容（按时间倒序） ===== */}}
+  {{ range sort $normal "Date" "desc" }}
+    {{ if in .RelPermalink "/photos/group/" }}
+      {{ partial "photo-grid.html" . }}
+    {{ else if in .RelPermalink "/photos/projects/" }}
+      {{ partial "project-block.html" . }}
     {{ end }}
-
-  </section>
-
+  {{ end }}
 </div>
 
 {{ end }}

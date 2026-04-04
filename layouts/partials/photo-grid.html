@@ -1,15 +1,9 @@
-<div class="photo-group">
-
-  <h3 class="photo-group-title">
-    {{ .Title }}
-  </h3>
+<section class="photos-section">
+  <h2 class="photos-section-title">{{ .Title }}</h2>
 
   <div class="photo-grid">
     {{ range .Resources.ByType "image" }}
-      <figure class="photo-item">
-        <img src="{{ .RelPermalink }}" alt="">
-      </figure>
+      <img src="{{ .RelPermalink }}" alt="{{ $.Title }}">
     {{ end }}
   </div>
-
-</div>
+</section>

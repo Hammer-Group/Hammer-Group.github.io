@@ -19,12 +19,12 @@ sections:
       spacing:
         padding: ['10px', '0', '40px', '0']
       background:
-        color: black
-        image:
+        color: white
+        image: 
           # Add your image background to `assets/media/`.
           filename: stacked-peaks.jpg
           filters:
-            brightness: 1.0
+            brightness: 1.12
           size: cover
           position: center
           parallax: false

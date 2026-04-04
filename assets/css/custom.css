@@ -905,24 +905,23 @@ time.text-sm {
   /* =========================
      标题：居中
      ========================= */
-  html body article.max-w-3xl.mx-auto.px-6.py-8 > h1 {
-    display: block !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 0 24px 0 !important;
-    padding: 0 !important;
-    text-align: center !important;
-    color: #0f172a !important;
-    font-size: clamp(1.9rem, 2.35vw, 2.5rem) !important;
-    font-weight: 700 !important;
-    line-height: 1.42 !important;
-    letter-spacing: -0.01em !important;
-    word-break: keep-all !important;
-    overflow-wrap: break-word !important;
-    white-space: normal !important;
-    text-wrap: wrap !important;
-    hyphens: none !important;
-  }
+     html body article.max-w-3xl.mx-auto.px-6.py-8 > h1 {
+      display: block !important;
+      width: 100% !important;
+      max-width: 820px !important;
+      margin: 0 auto 24px auto !important;
+      padding: 0 !important;
+      text-align: center !important;
+      color: #0f172a !important;
+      font-size: clamp(1.9rem, 2.35vw, 2.5rem) !important;
+      font-weight: 700 !important;
+      line-height: 1.42 !important;
+      letter-spacing: -0.01em !important;
+      word-break: normal !important;
+      overflow-wrap: break-word !important;
+      white-space: normal !important;
+      hyphens: none !important;
+    }
   
   /* =========================
      日期：左对齐
@@ -1428,3 +1427,848 @@ time.text-sm {
         display: none !important;
       }
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   首页首屏精修样式
+   适用区块 class: home-here-wide
+   用途：
+   1. 优化背景图可读性
+   2. 去掉标题卡片的生硬边框感
+   3. 优化 logo、标题、副标题、简介卡片
+   4. 做移动端适配
+   ========================================================= */
+
+   .home-here-wide {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* 背景图层基础设置 */
+  .home-here-wide .home-section-bg {
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    position: absolute;
+    inset: 0;
+  }
+  
+  /* 背景叠加柔和浅色遮罩，提升前景可读性 */
+  .home-here-wide .home-section-bg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.30) 0%,
+      rgba(255, 255, 255, 0.38) 35%,
+      rgba(255, 255, 255, 0.42) 100%
+    );
+    pointer-events: none;
+  }
+  
+  /* 确保前景内容在遮罩之上 */
+  .home-here-wide .container,
+  .home-here-wide .container-fluid,
+  .home-here-wide .row,
+  .home-here-wide [class*="col-"],
+  .home-here-wide .biography-wrapper,
+  .home-here-wide .portrait,
+  .home-here-wide .portrait-title,
+  .home-here-wide .article-style,
+  .home-here-wide .biography-content {
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* =========================================================
+     Logo / 头像区域
+     ========================================================= */
+  
+  /* 圆形头像/Logo 容器 */
+  .home-here-wide .avatar,
+  .home-here-wide .avatar-circle,
+  .home-here-wide .portrait img,
+  .home-here-wide .portrait-image {
+    border-radius: 50% !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
+    border: 6px solid rgba(255, 255, 255, 0.72);
+    background: rgba(255, 255, 255, 0.90);
+  }
+  
+  /* 如果主题对头像外层还有额外容器，也一起柔化 */
+  .home-here-wide .portrait {
+    text-align: center;
+  }
+  
+  /* =========================================================
+     标题卡片区域
+     重点：去掉“边框感太重/白块太硬”的问题
+     ========================================================= */
+  
+  .home-here-wide .portrait-title {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 18px 28px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.68);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    border: none !important;
+    outline: none !important;
+  }
+  
+  /* 去除标题区内部可能继承到的描边、阴影、边框 */
+  .home-here-wide .portrait-title *,
+  .home-here-wide .portrait-title h1,
+  .home-here-wide .portrait-title h2,
+  .home-here-wide .portrait-title h3,
+  .home-here-wide .portrait-title p,
+  .home-here-wide .portrait-title span {
+    text-shadow: none !important;
+    -webkit-text-stroke: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+  
+  /* 主标题 */
+  .home-here-wide .portrait-title h1,
+  .home-here-wide .portrait-title h2,
+  .home-here-wide .portrait-title .portrait-name,
+  .home-here-wide .portrait-title .home-section-title {
+    color: #111111 !important;
+    font-weight: 700 !important;
+    font-size: 2.45rem;
+    line-height: 1.18;
+    margin: 0 0 10px 0 !important;
+    letter-spacing: 0 !important;
+  }
+  
+  /* 副标题 */
+  .home-here-wide .portrait-title h3,
+  .home-here-wide .portrait-title .portrait-role,
+  .home-here-wide .portrait-title .portrait-subtitle,
+  .home-here-wide .portrait-title p {
+    color: #2f2f2f !important;
+    font-weight: 500 !important;
+    font-size: 1.08rem;
+    line-height: 1.5;
+    margin: 0 !important;
+    letter-spacing: 0 !important;
+  }
+  
+  /* 社交图标区如果在标题下面，稍微留白 */
+  .home-here-wide .network-icon,
+  .home-here-wide .social-icon {
+    margin-top: 10px;
+  }
+  
+  /* =========================================================
+     右侧简介/正文区域
+     ========================================================= */
+  
+  .home-here-wide .article-style,
+  .home-here-wide .biography-content,
+  .home-here-wide .biography-wrapper .article-style {
+    background: rgba(255, 255, 255, 0.84);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 20px;
+    padding: 24px 28px;
+    box-shadow: 0 8px 26px rgba(0, 0, 0, 0.07);
+    border: none !important;
+  }
+  
+  /* 正文标题 */
+  .home-here-wide .biography-title,
+  .home-here-wide .article-style h1,
+  .home-here-wide .article-style h2,
+  .home-here-wide .article-style h3 {
+    color: #111827 !important;
+    text-shadow: none !important;
+  }
+  
+  /* 正文文字 */
+  .home-here-wide .article-style,
+  .home-here-wide .article-style p,
+  .home-here-wide .article-style li,
+  .home-here-wide .article-style span,
+  .home-here-wide .biography-content,
+  .home-here-wide .biography-content p,
+  .home-here-wide .biography-content li,
+  .home-here-wide .biography-content span {
+    color: #1f2937 !important;
+    text-shadow: none !important;
+  }
+  
+  /* 链接 */
+  .home-here-wide .article-style a,
+  .home-here-wide .biography-content a {
+    color: #0b57d0 !important;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(11, 87, 208, 0.25);
+  }
+  
+  .home-here-wide .article-style a:hover,
+  .home-here-wide .biography-content a:hover {
+    color: #0842a0 !important;
+    border-bottom-color: rgba(8, 66, 160, 0.45);
+  }
+  
+  /* 列表间距更舒展 */
+  .home-here-wide .article-style ul,
+  .home-here-wide .article-style ol,
+  .home-here-wide .biography-content ul,
+  .home-here-wide .biography-content ol {
+    padding-left: 1.2rem;
+  }
+  
+  .home-here-wide .article-style li,
+  .home-here-wide .biography-content li {
+    margin-bottom: 0.35rem;
+  }
+  
+  /* =========================================================
+     通用文字优化
+     ========================================================= */
+  
+  .home-here-wide h1,
+  .home-here-wide h2,
+  .home-here-wide h3,
+  .home-here-wide h4,
+  .home-here-wide p,
+  .home-here-wide li,
+  .home-here-wide span {
+    text-shadow: none !important;
+  }
+  
+  /* 避免主题自带的分割线/边框影响观感 */
+  .home-here-wide hr,
+  .home-here-wide .section-subheading,
+  .home-here-wide .section-heading {
+    border-color: transparent !important;
+    box-shadow: none !important;
+  }
+  
+  /* =========================================================
+     布局微调
+     ========================================================= */
+  
+  /* 首屏上下更舒展一点 */
+  .home-here-wide.home-section,
+  section.home-here-wide {
+    padding-top: 28px !important;
+    padding-bottom: 48px !important;
+  }
+  
+  /* 左侧区域整体更集中 */
+  .home-here-wide .portrait + .portrait-title,
+  .home-here-wide .portrait-title {
+    text-align: center;
+  }
+  
+  /* =========================================================
+     平板适配
+     ========================================================= */
+  
+  @media (max-width: 992px) {
+    .home-here-wide .home-section-bg::after {
+      background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.34) 0%,
+        rgba(255, 255, 255, 0.42) 45%,
+        rgba(255, 255, 255, 0.48) 100%
+      );
+    }
+  
+    .home-here-wide .portrait-title {
+      padding: 16px 24px;
+      border-radius: 20px;
+      margin-top: 14px;
+    }
+  
+    .home-here-wide .portrait-title h1,
+    .home-here-wide .portrait-title h2,
+    .home-here-wide .portrait-title .portrait-name,
+    .home-here-wide .portrait-title .home-section-title {
+      font-size: 2.1rem;
+      margin-bottom: 8px !important;
+    }
+  
+    .home-here-wide .portrait-title h3,
+    .home-here-wide .portrait-title .portrait-role,
+    .home-here-wide .portrait-title .portrait-subtitle,
+    .home-here-wide .portrait-title p {
+      font-size: 1rem;
+    }
+  
+    .home-here-wide .article-style,
+    .home-here-wide .biography-content,
+    .home-here-wide .biography-wrapper .article-style {
+      padding: 20px 22px;
+      border-radius: 18px;
+    }
+  
+    .home-here-wide .avatar,
+    .home-here-wide .avatar-circle,
+    .home-here-wide .portrait img,
+    .home-here-wide .portrait-image {
+      border-width: 5px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.10);
+    }
+  }
+  
+  /* =========================================================
+     手机端适配
+     ========================================================= */
+  
+  @media (max-width: 768px) {
+    .home-here-wide .home-section-bg::after {
+      background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.40) 0%,
+        rgba(255, 255, 255, 0.50) 45%,
+        rgba(255, 255, 255, 0.56) 100%
+      );
+    }
+  
+    section.home-here-wide,
+    .home-here-wide.home-section {
+      padding-top: 20px !important;
+      padding-bottom: 34px !important;
+    }
+  
+    .home-here-wide .portrait-title {
+      margin-top: 12px;
+      padding: 14px 18px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.76);
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+    }
+  
+    .home-here-wide .portrait-title h1,
+    .home-here-wide .portrait-title h2,
+    .home-here-wide .portrait-title .portrait-name,
+    .home-here-wide .portrait-title .home-section-title {
+      font-size: 1.8rem;
+      line-height: 1.2;
+      margin-bottom: 6px !important;
+    }
+  
+    .home-here-wide .portrait-title h3,
+    .home-here-wide .portrait-title .portrait-role,
+    .home-here-wide .portrait-title .portrait-subtitle,
+    .home-here-wide .portrait-title p {
+      font-size: 0.96rem;
+      line-height: 1.45;
+    }
+  
+    .home-here-wide .article-style,
+    .home-here-wide .biography-content,
+    .home-here-wide .biography-wrapper .article-style {
+      margin-top: 18px;
+      padding: 16px 16px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.90);
+    }
+  
+    .home-here-wide .avatar,
+    .home-here-wide .avatar-circle,
+    .home-here-wide .portrait img,
+    .home-here-wide .portrait-image {
+      border-width: 4px;
+      box-shadow: 0 5px 16px rgba(0, 0, 0, 0.08);
+    }
+  }
+  
+  /* =========================================================
+     小屏手机进一步压缩
+     ========================================================= */
+  
+  @media (max-width: 480px) {
+    .home-here-wide .portrait-title {
+      padding: 12px 16px;
+      border-radius: 16px;
+    }
+  
+    .home-here-wide .portrait-title h1,
+    .home-here-wide .portrait-title h2,
+    .home-here-wide .portrait-title .portrait-name,
+    .home-here-wide .portrait-title .home-section-title {
+      font-size: 1.6rem;
+    }
+  
+    .home-here-wide .portrait-title h3,
+    .home-here-wide .portrait-title .portrait-role,
+    .home-here-wide .portrait-title .portrait-subtitle,
+    .home-here-wide .portrait-title p {
+      font-size: 0.92rem;
+    }
+  
+    .home-here-wide .article-style,
+    .home-here-wide .biography-content,
+    .home-here-wide .biography-wrapper .article-style {
+      padding: 14px 14px;
+    }
+  }
+
+  /* =========================================
+   去掉左侧 logo 下方标题卡片的白框
+   一定放在 custom.css 最后面
+   ========================================= */
+
+.home-here-wide .portrait-title {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  outline: none !important;
+  border-radius: 0 !important;
+  padding: 12px 0 0 0 !important;
+  margin-top: 14px !important;
+}
+
+/* 去掉标题区内部一切可能的白底/边框 */
+.home-here-wide .portrait-title * {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  outline: none !important;
+}
+
+/* 主标题 */
+.home-here-wide .portrait-title h1,
+.home-here-wide .portrait-title h2,
+.home-here-wide .portrait-title .portrait-name,
+.home-here-wide .portrait-title .home-section-title {
+  color: #111 !important;
+  font-weight: 700 !important;
+  font-size: 2.35rem !important;
+  line-height: 1.2 !important;
+  margin: 0 0 8px 0 !important;
+  text-shadow: 0 2px 10px rgba(255, 255, 255, 0.55) !important;
+  -webkit-text-stroke: 0 !important;
+}
+
+/* 副标题 */
+.home-here-wide .portrait-title h3,
+.home-here-wide .portrait-title p,
+.home-here-wide .portrait-title .portrait-role,
+.home-here-wide .portrait-title .portrait-subtitle {
+  color: #222 !important;
+  font-weight: 500 !important;
+  font-size: 1.08rem !important;
+  line-height: 1.45 !important;
+  margin: 0 !important;
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.5) !important;
+  -webkit-text-stroke: 0 !important;
+  display: block;
+}
+
+/* 手机端再缩一点 */
+@media (max-width: 768px) {
+  .home-here-wide .portrait-title {
+    padding-top: 10px !important;
+    margin-top: 12px !important;
+  }
+
+  .home-here-wide .portrait-title h1,
+  .home-here-wide .portrait-title h2,
+  .home-here-wide .portrait-title .portrait-name,
+  .home-here-wide .portrait-title .home-section-title {
+    font-size: 1.8rem !important;
+  }
+
+  .home-here-wide .portrait-title h3,
+  .home-here-wide .portrait-title p,
+  .home-here-wide .portrait-title .portrait-role,
+  .home-here-wide .portrait-title .portrait-subtitle {
+    font-size: 0.95rem !important;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   首页左侧 Logo + 标题最终优化版
+   目标：
+   1. 武汉理工大学颜色更深
+   2. Logo 与下方文字严格视觉居中
+   3. 整体更稳重、更协调
+   ========================================= */
+
+/* 左侧整体容器：强制所有内容水平居中 */
+.portrait-title {
+  width: 100% !important;
+  max-width: 320px !important;
+  margin: 12px auto 0 auto !important;
+  text-align: center !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* 主标题：铁锤子课题组 */
+.portrait-title > .text-3xl.font-bold.mb-2.mt-6 {
+  width: 100% !important;
+  color: #16263a !important;
+  font-size: 1.68rem !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+  letter-spacing: 0.015em !important;
+  margin: 8px auto 4px auto !important;
+  text-align: center !important;
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.35) !important;
+  background: transparent !important;
+}
+
+/* 副标题容器 */
+.portrait-title > .mb-2 {
+  width: 100% !important;
+  margin: 0 auto !important;
+  padding-top: 6px !important;
+  text-align: center !important;
+  background: transparent !important;
+}
+
+/* 副标题上方细分隔线 */
+.portrait-title > .mb-2::before {
+  content: "";
+  display: block;
+  width: 54px;
+  height: 1.5px;
+  margin: 0 auto 8px auto;
+  background: rgba(22, 38, 58, 0.28);
+  border-radius: 999px;
+}
+
+/* 副标题链接 */
+.portrait-title > .mb-2 > a {
+  display: inline-block !important;
+  text-decoration: none !important;
+  background: transparent !important;
+}
+
+/* 副标题文字：武汉理工大学 */
+.portrait-title > .mb-2 > a > div {
+  color: rgba(18, 28, 42, 0.92) !important;
+  font-size: 1.08rem !important;
+  font-weight: 550 !important;
+  line-height: 1.4 !important;
+  letter-spacing: 0.03em !important;
+  text-align: center !important;
+  text-shadow: 0 1px 5px rgba(255, 255, 255, 0.22) !important;
+  background: transparent !important;
+  transition: color 0.2s ease !important;
+}
+
+/* hover 时略微提亮 */
+.portrait-title > .mb-2 > a:hover > div {
+  color: #163f78 !important;
+}
+
+/* 如果头像/Logo 外层容器存在，强制居中 */
+.avatar,
+.avatar-wrapper,
+.author-avatar,
+.portrait,
+.portrait-wrap,
+.home-avatar {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* 如果图片本身存在，强制块级居中 */
+.avatar img,
+.author-avatar img,
+.portrait img,
+.home-avatar img {
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* 手机端微调 */
+@media (max-width: 768px) {
+  .portrait-title {
+    max-width: 280px !important;
+    margin-top: 10px !important;
+  }
+
+  .portrait-title > .text-3xl.font-bold.mb-2.mt-6 {
+    font-size: 1.52rem !important;
+    margin-top: 6px !important;
+    margin-bottom: 3px !important;
+  }
+
+  .portrait-title > .mb-2 {
+    padding-top: 5px !important;
+  }
+
+  .portrait-title > .mb-2::before {
+    width: 46px;
+    margin-bottom: 6px;
+  }
+
+  .portrait-title > .mb-2 > a > div {
+    font-size: 1rem !important;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========================================
+   Photos 页面标题最终优化版
+   只作用于照片页，不影响全站其它页面
+   建议放在 custom.css 最后面
+   ======================================== */
+
+/* 照片页整体宽度和留白 */
+.photos-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* 每个图片区块 */
+.photos-page .photos-section {
+  margin: 0 0 3.2rem 0;
+}
+
+/* 分组标题 */
+.photos-page .photos-section-title {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  margin: 0 0 1.2rem 0 !important;
+  padding-left: 18px !important;
+  max-width: 1100px;
+
+  color: #183a63 !important;
+  font-size: 1.68rem !important;
+  font-weight: 700 !important;
+  line-height: 1.38 !important;
+  letter-spacing: 0.008em !important;
+
+  border: none !important;
+  text-shadow: none !important;
+  background: transparent !important;
+}
+
+/* 左侧竖线 */
+.photos-page .photos-section-title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.16em;
+  width: 4px;
+  height: 1.18em;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #1d4f91 0%, #2563eb 100%);
+}
+
+/* 标题和下面图片/视频区的距离 */
+.photos-page .photos-section-title + .photo-grid,
+.photos-page .photos-section-title + .project-video-grid {
+  margin-top: 0.2rem !important;
+}
+
+/* 如果一个区块里标题下面直接接别的元素，也统一节奏 */
+.photos-page .photos-section > *:not(.photos-section-title) {
+  position: relative;
+}
+
+/* 可选：括号里的长说明自然换行更舒服 */
+.photos-page .photos-section-title {
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+/* 保留你原有图片网格，但顺手补一点节奏 */
+.photos-page .photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* 图片样式 */
+.photos-page .photo-grid img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.photos-page .photo-grid img:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.12);
+}
+
+/* 视频区保持统一风格 */
+.photos-page .project-video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin: 0 0 1.2rem 0;
+}
+
+.photos-page .project-video {
+  display: flex;
+  justify-content: center;
+}
+
+.photos-page .video-wrapper {
+  width: 100%;
+  max-width: 720px;
+  aspect-ratio: 16 / 9;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+  background: #000;
+}
+
+.photos-page .video-wrapper.vertical {
+  max-width: 360px;
+  aspect-ratio: 9 / 16;
+}
+
+.photos-page .video-wrapper video,
+.photos-page .video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: none;
+  object-fit: contain;
+}
+
+/* 手机端 */
+@media (max-width: 768px) {
+  .photos-page {
+    padding: 0 16px;
+  }
+
+  .photos-page .photos-section {
+    margin-bottom: 2.4rem;
+  }
+
+  .photos-page .photos-section-title {
+    font-size: 1.3rem !important;
+    line-height: 1.42 !important;
+    padding-left: 14px !important;
+    margin-bottom: 0.95rem !important;
+  }
+
+  .photos-page .photos-section-title::before {
+    width: 3px;
+    height: 1.14em;
+    top: 0.18em;
+  }
+
+  .photos-page .photo-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .photos-page .project-video-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}

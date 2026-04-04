@@ -1,4 +1,6 @@
 ---
-title: " 照片墙 "
+title: ""
 type: photos
 ---
+
+<div class="photos-page">

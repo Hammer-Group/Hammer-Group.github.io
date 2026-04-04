@@ -1,42 +1,46 @@
-<div class="project-block">
-  <h3>{{ .Title }}</h3>
+<section class="photos-section">
+  <h2 class="photos-section-title">{{ .Title }}</h2>
 
   {{/* ===== 视频区域 ===== */}}
   {{ with .Params.videos }}
     <div class="project-video-grid">
-
       {{ range . }}
-        <div class="project-video {{ if eq .orientation "vertical" }}vertical-video{{ end }}">
-
-          <div class="video-wrapper {{ if eq .orientation "vertical" }}vertical{{ end }}">
-
-            {{ if eq .type "local" }}
+        {{ if eq .type "local" }}
+          <div class="project-video">
+            <div class="video-wrapper {{ if eq .ratio `vertical` }}vertical{{ end }}">
               {{ with $.Resources.GetMatch .src }}
-                <video controls preload="metadata">
+                <video controls playsinline preload="metadata">
                   <source src="{{ .RelPermalink }}" type="video/mp4">
                 </video>
               {{ end }}
-
-            {{ else if eq .type "bilibili" }}
-              <iframe
-                src="https://player.bilibili.com/player.html?bvid={{ .video_id }}"
-                frameborder="0"
-                allowfullscreen>
-              </iframe>
-
-            {{ else if eq .type "youtube" }}
-              <iframe
-                src="https://www.youtube.com/embed/{{ .video_id }}"
-                frameborder="0"
-                allowfullscreen>
-              </iframe>
-
-            {{ end }}
-
+            </div>
           </div>
-        </div>
-      {{ end }}
 
+        {{ else if eq .type "bilibili" }}
+          <div class="project-video">
+            <div class="video-wrapper {{ if eq .ratio `vertical` }}vertical{{ end }}">
+              <iframe
+                src="{{ .src }}"
+                allowfullscreen
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+
+        {{ else if eq .type "youtube" }}
+          <div class="project-video">
+            <div class="video-wrapper {{ if eq .ratio `vertical` }}vertical{{ end }}">
+              <iframe
+                src="{{ .src }}"
+                allowfullscreen
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+        {{ end }}
+      {{ end }}
     </div>
   {{ end }}
 
@@ -45,8 +49,8 @@
   {{ if gt (len $images) 0 }}
     <div class="photo-grid">
       {{ range $images }}
-        <img src="{{ .RelPermalink }}" alt="">
+        <img src="{{ .RelPermalink }}" alt="{{ $.Title }}">
       {{ end }}
     </div>
   {{ end }}
-</div>
+</section>
