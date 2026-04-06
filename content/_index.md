@@ -17,27 +17,18 @@ sections:
     design:
       css_class: home-here-wide
       spacing:
-        padding: ['10px', '0', '40px', '0']
+        padding: ['24px', '0', '48px', '0']
       background:
         color: white
-        image: 
+        image:
           # Add your image background to `assets/media/`.
           filename: stacked-peaks.jpg
           filters:
-            brightness: 1.12
+            brightness: 1.08
           size: cover
           position: center
           parallax: false
-#  - block: collection
-#    id: publication
-#    content:
-#     title: Featured Publications
-#    filters:
-#     folders:
-#          - publication
-#        featured_only: true
-#   design:
-#      view: card
+
   - block: collection
     content:
       title: 近期新闻
@@ -67,9 +58,9 @@ sections:
       # Choose a layout view
       view: date-title-summary
       css_class: news-cards
-      # Reduce spacing
       spacing:
-        padding: ['4rem', '0', '0', '0']
+        padding: ['3.5rem', '0', '0', '0']
+
   - block: cta-card
     demo: true # Only display this section in the Hugo Blox Builder demo site
     content:
@@ -80,7 +71,7 @@ sections:
         <a class="github-button" href="https://github.com/HugoBlox/hugo-blox-builder" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star HugoBlox/hugo-blox-builder on GitHub">Star</a>
 
         Easily build anything with blocks - no-code required!
-        
+
         From landing pages, second brains, and courses to academic resumés, conferences, and tech blogs.
       button:
         text: Get Started

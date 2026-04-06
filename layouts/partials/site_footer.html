@@ -1,96 +1,26 @@
-<p class="powered-by">
-  {{ with site.Copyright }}{{ replace . "{year}" now.Year | markdownify }} {{ end }}
-</p>
-
-<!-- 不蒜子样式美化 -->
-<style>
-  .busuanzi-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin-top: 15px;
-    font-size: 0.85rem;
-    /* 使用半透明颜色，使其在明暗主题下都能自然融入 */
-    color: inherit; 
-    opacity: 0.6;
-    transition: opacity 0.3s ease;
-  }
-  .busuanzi-container:hover {
-    opacity: 1; /* 鼠标悬浮时变亮 */
-  }
-  .busuanzi-item {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
-  .busuanzi-item svg {
-    width: 16px;
-    height: 16px;
-  }
-  .busuanzi-value {
-    font-weight: 600;
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; /* 让数字显示更整齐 */
-  }
-  .busuanzi-divider {
-    opacity: 0.3;
-    font-size: 0.8rem;
-  }
-</style>
-
-<!-- 不蒜子 HTML 结构 -->
-<div class="busuanzi-container">
-  <!-- 访问量 (PV) -->
-  <span id="busuanzi_container_site_pv" class="busuanzi-item" style="display: flex !important;">
-    <!-- 眼睛图标 -->
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-      <circle cx="12" cy="12" r="3"></circle>
-    </svg>
-    <span>访问量 <span id="busuanzi_value_site_pv" class="busuanzi-value">...</span> 次</span>
-  </span>
-
-  <span class="busuanzi-divider">|</span>
-
-  <!-- 访客数 (UV) -->
-  <span id="busuanzi_container_site_uv" class="busuanzi-item" style="display: flex !important;">
-    <!-- 用户图标 -->
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-      <circle cx="12" cy="7" r="4"></circle>
-    </svg>
-    <span>访客数 <span id="busuanzi_value_site_uv" class="busuanzi-value">...</span> 人</span>
-  </span>
-</div>
-
-<!-- 不蒜子核心脚本 -->
-<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
 {{ if .IsHome }}
-<div class="floating-board floating-board-left">
-  <div class="board-badge">招生信息</div>
-  <h3>招生宣传简章</h3>
-  <p><span class="board-title-line">欢迎自动化、电气、数学、机械、计算机等专业同学咨询报考研究生。</span></p>
-  <p class="board-note">研究方向包括：新型电力系统、综合能源、人工智能应用、无人系统与智能装备等。</p>
-</div>
+  <div class="floating-board floating-board-left">
+    <div class="board-badge">招生信息</div>
+    <h3>招生宣传简章</h3>
+    <p>
+      欢迎自动化、电气、数学、机械、计算机等相关专业同学咨询报考研究生。
+    </p>
+    <p class="board-note">
+      研究方向包括：新型电力系统、综合能源、人工智能应用、无人系统与智能装备等。
+    </p>
+  </div>
 
-<div class="floating-board floating-board-right">
-  <div class="board-badge">联系方式</div>
-  <h3>欢迎邮件联系</h3>
-  <p><a href="mailto:tm@whut.edu.cn">tm@whut.edu.cn</a></p>
-  <p><a href="mailto:zcdong@whut.edu.cn">zcdong@whut.edu.cn</a></p>
-  <p class="board-note">欢迎有责任心、有上进心、有团队精神的同学加入。</p>
-</div>
+  <div class="floating-board floating-board-right">
+    <div class="board-badge">联系方式</div>
+    <h3>欢迎邮件联系</h3>
+    <p>
+      <a href="mailto:tm@whut.edu.cn">tm@whut.edu.cn</a>
+    </p>
+    <p>
+      <a href="mailto:zcdong@whut.edu.cn">zcdong@whut.edu.cn</a>
+    </p>
+    <p class="board-note">
+      欢迎有责任心、有上进心、有团队精神的同学加入。
+    </p>
+  </div>
 {{ end }}

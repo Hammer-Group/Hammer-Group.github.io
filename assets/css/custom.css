@@ -1695,8 +1695,8 @@ time.text-sm {
   /* 首屏上下更舒展一点 */
   .home-here-wide.home-section,
   section.home-here-wide {
-    padding-top: 28px !important;
-    padding-bottom: 48px !important;
+    padding-top: 16px !important;
+    padding-bottom: 40px !important;
   }
   
   /* 左侧区域整体更集中 */
@@ -2272,3 +2272,177 @@ time.text-sm {
     gap: 16px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   首页宣传板最终强制覆盖版
+   说明：
+   1. 只作用于 floating-board
+   2. 放在 custom.css 最末尾
+   3. 不改首页其它区块，避免影响“近期新闻”等样式
+   ========================================================= */
+
+   :root {
+    /* 宣传板基础参数，可直接改这几个值 */
+    --board-width-final: 220px;          /* 宣传板宽度 */
+    --board-top-final: 530px;            /* 距离页面顶部的位置 */
+    --board-side-final: clamp(20px, 3vw, 56px); /* 距离左右边缘 */
+    --board-radius-final: 20px;
+  }
+  
+  /* 统一宣传板样式 */
+  .floating-board {
+    position: fixed !important;
+    top: var(--board-top-final) !important;
+    width: var(--board-width-final) !important;
+    max-width: var(--board-width-final) !important;
+    min-width: var(--board-width-final) !important;
+    box-sizing: border-box !important;
+    z-index: 999 !important;
+  
+    padding: 18px 16px !important;
+    border-radius: var(--board-radius-final) !important;
+  
+    background: rgba(255, 255, 255, 0.90) !important;
+    border: 1px solid rgba(15, 23, 42, 0.06) !important;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.10) !important;
+  
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+  
+    overflow: hidden !important;
+  }
+  
+  /* 左右位置：直接贴近屏幕两侧，避免跟首页主体布局互相牵连 */
+  .floating-board-left {
+    left: var(--board-side-final) !important;
+    right: auto !important;
+  }
+  
+  .floating-board-right {
+    right: var(--board-side-final) !important;
+    left: auto !important;
+  }
+  
+  /* 内容细节统一 */
+  .floating-board .board-badge {
+    display: inline-block !important;
+    margin-bottom: 12px !important;
+    padding: 4px 10px !important;
+    border-radius: 999px !important;
+    background: rgba(37, 99, 235, 0.08) !important;
+    color: #2563eb !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+  }
+  
+  .floating-board h3 {
+    margin: 0 0 12px 0 !important;
+    color: #0f172a !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    line-height: 1.45 !important;
+  }
+  
+  .floating-board p {
+    margin: 0 0 10px 0 !important;
+    color: #475569 !important;
+    font-size: 14px !important;
+    line-height: 1.85 !important;
+  }
+  
+  .floating-board p:last-child {
+    margin-bottom: 0 !important;
+  }
+  
+  .floating-board a {
+    color: #2563eb !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    word-break: break-word !important;
+  }
+  
+  .floating-board a:hover {
+    text-decoration: underline !important;
+  }
+  
+  .floating-board .board-note {
+    color: #64748b !important;
+    font-size: 13px !important;
+    line-height: 1.8 !important;
+  }
+  
+  /* =========================
+     大屏稍微放大一点
+     ========================= */
+  @media (min-width: 1700px) {
+    :root {
+      --board-width-final: 235px;
+      --board-top-final: 545px;
+      --board-side-final: clamp(28px, 5vw, 90px);
+    }
+  }
+  
+  /* =========================
+     中等屏幕：缩窄一点，避免压到中间内容
+     ========================= */
+  @media (max-width: 1500px) {
+    :root {
+      --board-width-final: 200px;
+      --board-top-final: 520px;
+      --board-side-final: 18px;
+    }
+  
+    .floating-board h3 {
+      font-size: 17px !important;
+    }
+  
+    .floating-board p {
+      font-size: 13.5px !important;
+    }
+  }
+  
+  /* =========================
+     再窄一点的屏幕：直接隐藏
+     原因：继续显示容易压住首页新闻和介绍区
+     ========================= */
+  @media (max-width: 1280px) {
+    .floating-board {
+      display: none !important;
+    }
+  }
