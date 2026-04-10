@@ -81,7 +81,15 @@ tags:
 
 <figure style="margin-bottom:10px;"> <img src="photo2.webp" style="display:block; margin:0 auto; max-width:100%; height:auto;"> </figure>
 
-三、建设成效
+<div style="text-align:center;">
+<section style="display: inline-block;vertical-align: middle;padding: 5px 20px;border-radius: 10px;background-image: linear-gradient(140deg, rgba(171, 243, 226, 0.8) 0%, rgb(44, 124, 205) 51%, rgba(36, 136, 224, 0.8) 100%);">
+<section style="font-size: 20px;color: white;letter-spacing: 1px;">
+<p style="margin: 0;">
+<strong>三、建设成效</strong>
+</p>
+</section>
+</section>
+</div>
 
 <strong>科研创新成果方面。</strong>团队聚焦国家战略领域，承担国家自然科学基金、工信部高技术船舶专项等纵向项目20余项，横向合作项目100余项，研究覆盖国防军工、智慧电力等多个关键领域；近三年发表高水平学术论文80余篇（其中SCI/EI收录60余篇），申请国家发明专利20余项，部分成果已应用于防灾减灾、可再生能源利用等场景，获得省部级以上科技奖励5项，为行业提质增效提供技术支撑，产生显著社会与经济效益。
 
@@ -91,10 +99,17 @@ tags:
 
 团队建设经验多次在学院、学校交流分享，“党建引领+科创赋能”模式被多个导学团队借鉴；结对班级获“校标兵班集体”“五四红旗团支部”等荣誉，研究生班级自研2102班、本科生班级自动化2005班成为学校班风学风建设典型案例；相关育人成果与特色做法被媒体报道，为高校理工科导学团队建设提供实践样本。
 
-四、未来规划
+<div style="text-align:center;">
+<section style="display: inline-block;vertical-align: middle;padding: 5px 20px;border-radius: 10px;background-image: linear-gradient(140deg, rgba(171, 243, 226, 0.8) 0%, rgb(44, 124, 205) 51%, rgba(36, 136, 224, 0.8) 100%);">
+<section style="font-size: 20px;color: white;letter-spacing: 1px;">
+<p style="margin: 0;">
+<strong>四、未来规划</strong>
+</p>
+</section>
+</section>
+</div>
 
 未来3年，团队将围绕“提质增效、创新突破、辐射引领”目标，实施四大提升计划。
-
 师德师风提升计划：常态化开展师德专题学习，培育“四有”好老师队伍。育人质量提升计划：优化多层级协同培养机制，新增跨学科课程3-5门，力争省级优秀学位论文数量翻倍。科研创新提升计划：聚焦智慧船舶、新型配电网等前沿领域，新增国家级项目5-8项，推动3-5项成果转化。团队文化提升计划：深化“研本共建”与人文关怀，拓展国际学术交流渠道，培育具有国际视野的创新人才。重点开展跨校跨企业合作平台建设、科创竞赛孵化基地打造、学术诚信教育体系完善等工作，力争建成国内有影响力的研究生导学示范团队，为学科发展与国家科技进步持续贡献力量。
 <figure style="margin-bottom:10px;"> <img src="photo3.webp" style="display:block; margin:0 auto; max-width:100%; height:auto;"> </figure>
 
