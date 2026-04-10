@@ -392,3 +392,11 @@ tags:
 <figure style="margin-bottom:10px;"> <img src="photo3.webp" style="display:block; margin:0 auto; max-width:100%; height:auto;"> </figure>
 
 <div style="text-align:right; margin-top:30px; line-height:1.8;"> 供稿：自动化学院<br> 排版：谢思豪<br> 责编：张琴、张蔚<br> 审核：田仕、吕睿 </div> 
+<p style="text-align:right; margin-top:30px;">
+来源：
+  <a href="https://mp.weixin.qq.com/s/wXdflTdov3eqrKaVdlqCcA"
+     target="_blank"
+     style="color:#0066cc; text-decoration:underline;">
+     武汉理工大学研究生公众号
+  </a>
+</p>
