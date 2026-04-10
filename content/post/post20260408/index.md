@@ -67,7 +67,7 @@ tags:
     font-weight:bold;
     font-size:18px;
   ">
-    2
+    1
   </div>
 
   <!-- 标题 -->
@@ -95,7 +95,45 @@ tags:
 
 在师德师风引领上，坚守教师职业道德规范，发挥党员先锋模范作用，打造“为人师表、潜心育人”的导师队伍；在育人模式创新上，深化多层级协同培养与党建育人融合机制，构建跨学科、重实践的培养体系；在团队文化塑造上，营造“团结协作、科研报国、追求卓越”的学术氛围，兼顾学生专业成长与身心健康；在成果业绩突破上，聚焦国家关键核心技术领域，实现科研创新与人才培养协同提升，推动学科发展与行业需求精准对接，助力学生成长为行业中坚力量。
 
-2. 重点建设任务
+<section style="display:flex;align-items:center;margin:16px 0;">
+
+  <!-- 左侧编号 -->
+  <div style="
+    width:38px;height:38px;
+    border-radius:50%;
+    border:2px solid #0b5fa5;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#0b5fa5;
+    font-weight:bold;
+    font-size:18px;
+  ">
+    2
+  </div>
+
+  <!-- 标题 -->
+  <div style="
+    margin-left:8px;
+    background:#0b5fa5;
+    color:#ffffff;
+    padding:6px 16px;
+    border-radius:8px;
+    font-weight:bold;
+    font-size:18px;
+  ">
+    重点建设任务
+  </div>
+
+  <!-- 右侧延伸线 -->
+  <div style="
+    flex:1;
+    height:2px;
+    background:#0b5fa5;
+    margin-left:10px;
+  "></div>
+
+</section>
 
 <strong>深化党建引领育人实效。</strong>拓展“师生结对・支部共建”范围，创新理论学习与实践研学融合模式。
 
@@ -125,7 +163,45 @@ tags:
 
 本团队以“党建为魂、科研为基、育人为本”为核心，创新形成“三维驱动、多层协同、全域覆盖”的建设模式，将特色做法贯穿育人全过程，凸显差异化优势与可推广价值。 
 
-1. 党建引领三维育人 筑牢家国情怀根基
+<section style="display:flex;align-items:center;margin:16px 0;">
+
+  <!-- 左侧编号 -->
+  <div style="
+    width:38px;height:38px;
+    border-radius:50%;
+    border:2px solid #0b5fa5;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#0b5fa5;
+    font-weight:bold;
+    font-size:18px;
+  ">
+    1
+  </div>
+
+  <!-- 标题 -->
+  <div style="
+    margin-left:8px;
+    background:#0b5fa5;
+    color:#ffffff;
+    padding:6px 16px;
+    border-radius:8px;
+    font-weight:bold;
+    font-size:18px;
+  ">
+    党建引领三维育人 筑牢家国情怀根基
+  </div>
+
+  <!-- 右侧延伸线 -->
+  <div style="
+    flex:1;
+    height:2px;
+    background:#0b5fa5;
+    margin-left:10px;
+  "></div>
+
+</section>
 
 以党支部为战斗堡垒，通过“理论研学、实践践学、学创互促”三维发力，将思想政治教育融入科研与成长各环节，培养学生“科研报国”的责任担当。
 
