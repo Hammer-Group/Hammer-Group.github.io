@@ -81,14 +81,22 @@ tags:
 
 <figure style="margin-bottom:10px;"> <img src="photo2.webp" style="display:block; margin:0 auto; max-width:100%; height:auto;"> </figure>
 
-<div style="text-align:center;">
-<section style="display: inline-block;vertical-align: middle;padding: 5px 20px;border-radius: 10px;background-image: linear-gradient(140deg, rgba(171, 243, 226, 0.8) 0%, rgb(44, 124, 205) 51%, rgba(36, 136, 224, 0.8) 100%);">
-<section style="font-size: 20px;color: white;letter-spacing: 1px;">
-<p style="margin: 0;">
-<strong>三、建设成效</strong>
-</p>
-</section>
-</section>
+<div style="text-align:center; margin:20px 0;">
+    <div style="
+        display:inline-flex;
+        align-items:center;
+        justify-content:center;
+        padding:8px 24px;
+        border-radius:10px;
+        background: linear-gradient(140deg, #abf3e2, #2c7ccd, #2488e0);
+        color:#ffffff;
+        font-size:20px;
+        font-weight:bold;
+        letter-spacing:1px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    ">
+        三、建设成效
+    </div>
 </div>
 
 <strong>科研创新成果方面。</strong>团队聚焦国家战略领域，承担国家自然科学基金、工信部高技术船舶专项等纵向项目20余项，横向合作项目100余项，研究覆盖国防军工、智慧电力等多个关键领域；近三年发表高水平学术论文80余篇（其中SCI/EI收录60余篇），申请国家发明专利20余项，部分成果已应用于防灾减灾、可再生能源利用等场景，获得省部级以上科技奖励5项，为行业提质增效提供技术支撑，产生显著社会与经济效益。
@@ -99,14 +107,22 @@ tags:
 
 团队建设经验多次在学院、学校交流分享，“党建引领+科创赋能”模式被多个导学团队借鉴；结对班级获“校标兵班集体”“五四红旗团支部”等荣誉，研究生班级自研2102班、本科生班级自动化2005班成为学校班风学风建设典型案例；相关育人成果与特色做法被媒体报道，为高校理工科导学团队建设提供实践样本。
 
-<div style="text-align:center;">
-<section style="display: inline-block;vertical-align: middle;padding: 5px 20px;border-radius: 10px;background-image: linear-gradient(140deg, rgba(171, 243, 226, 0.8) 0%, rgb(44, 124, 205) 51%, rgba(36, 136, 224, 0.8) 100%);">
-<section style="font-size: 20px;color: white;letter-spacing: 1px;">
-<p style="margin: 0;">
-<strong>四、未来规划</strong>
-</p>
-</section>
-</section>
+<div style="text-align:center; margin:20px 0;">
+    <div style="
+        display:inline-flex;
+        align-items:center;
+        justify-content:center;
+        padding:8px 24px;
+        border-radius:10px;
+        background: linear-gradient(140deg, #abf3e2, #2c7ccd, #2488e0);
+        color:#ffffff;
+        font-size:20px;
+        font-weight:bold;
+        letter-spacing:1px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    ">
+        四、未来规划
+    </div>
 </div>
 
 未来3年，团队将围绕“提质增效、创新突破、辐射引领”目标，实施四大提升计划。
