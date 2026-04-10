@@ -13,13 +13,15 @@ tags:
   - 自动化学院
   - 智能控制与智能系统研究中心
 ---
-<p style="text-align:center;">
+<p style="margin:10px auto; text-align:center;">
 
   <span style="
+    display:block;
+    width:fit-content;
+    margin:0 auto;
     border:1px solid #108cd7;
     border-radius:12px;
     padding:10px 20px;
-    display:inline-block;
     font-weight:bold;
   ">
     智能驱动跨域攻关&nbsp;&nbsp;德技并修人文润心
@@ -207,19 +209,133 @@ tags:
 
 依托自动化学院研究生第四党支部，建立“师生同学、实践研学、学创循环”常态化机制。向内邀请学术带头人解读国家战略需求，向外与校内外党支部开展共建联学，组织党员参与中船重工、国家电网等重点企业研学全覆盖；结合AI技术创编特色党课，形成“学习-实践-创作-传播”闭环。每学期开展“科研报国・研途有我”主题党日活动，组织聆听时代楷模张连钢报告会，邀请企业精英与学术带头人分享行业报国实例；创编的廉洁微网课《“尽小者大，慎微者著”》在央视网展播，《从“爱达・魔都”看中国智造的创新密码》成为学院精品党课。支部获批学校首批研究生样板党支部，党员服务时长年人均达40小时；该模式实现思政教育与专业特色结合，已在学院多个导学团队推广借鉴。
 
-2. 多层级协同培养机制 精准赋能学术成长
+<section style="display:flex;align-items:center;margin:16px 0;">
+
+  <!-- 左侧编号 -->
+  <div style="
+    width:38px;height:38px;
+    border-radius:50%;
+    border:2px solid #0b5fa5;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#0b5fa5;
+    font-weight:bold;
+    font-size:18px;
+  ">
+    2
+  </div>
+
+  <!-- 标题 -->
+  <div style="
+    margin-left:8px;
+    background:#0b5fa5;
+    color:#ffffff;
+    padding:6px 16px;
+    border-radius:8px;
+    font-weight:bold;
+    font-size:18px;
+  ">
+    多层级协同培养机制 精准赋能学术成长
+  </div>
+
+  <!-- 右侧延伸线 -->
+  <div style="
+    flex:1;
+    height:2px;
+    background:#0b5fa5;
+    margin-left:10px;
+  "></div>
+
+</section>
 
 针对研究生差异化发展需求，构建“大组会交流、小组会攻坚、一对一导学”三级体系，实现学术指导全覆盖、个性化、精细化。
 
 课题组大组会聚焦进展汇报与跨方向交流，研究方向小组会针对理论难点与实验技巧开展专题攻坚，导师一对一面谈定制学术规划与职业建议。新生入学即开展“博硕本差异”“治学方法”专题谈话，依据基础提供文献支持与前沿跟踪。针对科研入门研究生，通过小组会拆解“为什么做、做什么、怎么做”核心问题；为高年级研究生搭建学术交流平台，一年来“博学科普讲堂”开展专题报告5人次，多人参与国家级课题研究。近三年指导省级优秀学位论文4篇、校级优秀学位论文28篇，研究生发表高水平学术论文80余篇（SCI/EI收录60余篇），申请专利20余项；该机制适配不同层次研究生培养需求，可复制于理工科导学团队。
 
-3. “研本共建”科创梯队 贯通创新人才培养链
+<section style="display:flex;align-items:center;margin:16px 0;">
+
+  <!-- 左侧编号 -->
+  <div style="
+    width:38px;height:38px;
+    border-radius:50%;
+    border:2px solid #0b5fa5;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#0b5fa5;
+    font-weight:bold;
+    font-size:18px;
+  ">
+    2
+  </div>
+
+  <!-- 标题 -->
+  <div style="
+    margin-left:8px;
+    background:#0b5fa5;
+    color:#ffffff;
+    padding:6px 16px;
+    border-radius:8px;
+    font-weight:bold;
+    font-size:18px;
+  ">
+    “研本共建”科创梯队 贯通创新人才培养链
+  </div>
+
+  <!-- 右侧延伸线 -->
+  <div style="
+    flex:1;
+    height:2px;
+    background:#0b5fa5;
+    margin-left:10px;
+  "></div>
+
+</section>
 
 发挥研究生科研优势，联动本科生班级构建“启蒙-培养-竞赛-成长”全链条科创培养体系，实现资源共享、互助共进。
 
 与6个研究生班级、4个本科生班级长期结对，组建机器人大赛、电工电子设计等兴趣小组，通过赛事宣讲、技术帮扶、联合组队等方式，开展科创辅导活动60余场。指导本科生自动化2005班实现省部级以上获奖率100%，保研率39.47%；结对班级累计斩获国家级奖项11项、省部级奖项31项、校级奖项62项，获评“校标兵班集体”等荣誉12项；该梯队模式打通本研培养壁垒，已成为学校科创育人特色品牌。
 
-4. 学术道德与人文关怀并重 护航全面发展
+<section style="display:flex;align-items:center;margin:16px 0;">
+
+  <!-- 左侧编号 -->
+  <div style="
+    width:38px;height:38px;
+    border-radius:50%;
+    border:2px solid #0b5fa5;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#0b5fa5;
+    font-weight:bold;
+    font-size:18px;
+  ">
+    4
+  </div>
+
+  <!-- 标题 -->
+  <div style="
+    margin-left:8px;
+    background:#0b5fa5;
+    color:#ffffff;
+    padding:6px 16px;
+    border-radius:8px;
+    font-weight:bold;
+    font-size:18px;
+  ">
+    学术道德与人文关怀并重 护航全面发展
+  </div>
+
+  <!-- 右侧延伸线 -->
+  <div style="
+    flex:1;
+    height:2px;
+    background:#0b5fa5;
+    margin-left:10px;
+  "></div>
+
+</section>
 
 团队坚持“严管厚爱”结合，既强化学术规范与安全管理，又关注学生身心健康与个性化需求，营造和谐导学氛围。
 
