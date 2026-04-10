@@ -19,16 +19,22 @@ tags:
 
 智能控制与智能系统研究中心导学团队以习近平新时代中国特色社会主义思想为指导，秉承“博雅、求真、立人”核心理念，坚守“四个统一”育人准则，构建“党建引领+科研赋能+协同育人+人文关怀”四位一体建设模式，创新多层级协同培养机制与“研本共建”科创梯队，将思想政治教育与学术科研深度融合，着力培养具有“家国情怀、创新精神、国际视野”的高层次技术人才，为国家战略领域与行业高质量发展提供坚实支撑。
 
-<div style="
-    text-align:center;
-    background-color:#2F5597;
-    color:white;
-    font-weight:bold;
-    padding:8px 0;
-    margin:20px 0;
-    border-radius:6px;
-">
-一、团队概况
+<div style="text-align:center; margin:20px 0;">
+    <div style="
+        display:inline-flex;
+        align-items:center;
+        justify-content:center;
+        padding:8px 24px;
+        border-radius:10px;
+        background: linear-gradient(140deg, #abf3e2, #2c7ccd, #2488e0);
+        color:#ffffff;
+        font-size:20px;
+        font-weight:bold;
+        letter-spacing:1px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    ">
+        一、团队建设
+    </div>
 </div>
 
 <figure style="margin-bottom:10px;"> <img src="photo1.webp" style="display:block; margin:0 auto; max-width:100%; height:auto;"> </figure>
@@ -51,7 +57,23 @@ tags:
 
 <strong>筑牢学术道德防线。</strong>构建全流程学术诚信监督体系，提升人才培养质量与社会认可度。
 
-二、特色做法
+<div style="text-align:center; margin:20px 0;">
+    <div style="
+        display:inline-flex;
+        align-items:center;
+        justify-content:center;
+        padding:8px 24px;
+        border-radius:10px;
+        background: linear-gradient(140deg, #abf3e2, #2c7ccd, #2488e0);
+        color:#ffffff;
+        font-size:20px;
+        font-weight:bold;
+        letter-spacing:1px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    ">
+        二、特色做法
+    </div>
+</div>
 
 本团队以“党建为魂、科研为基、育人为本”为核心，创新形成“三维驱动、多层协同、全域覆盖”的建设模式，将特色做法贯穿育人全过程，凸显差异化优势与可推广价值。 
 
