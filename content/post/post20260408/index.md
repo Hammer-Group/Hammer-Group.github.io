@@ -13,26 +13,19 @@ tags:
   - 自动化学院
   - 智能控制与智能系统研究中心
 ---
-<div style="width: 100%; text-align: center;">
+<p style="text-align:center;">
 
-  <div style="
-    display: inline-block;
-    border: 1px solid #108cd7;
-    border-radius: 12px;
-    padding: 10px 20px;
-    box-shadow: 6px 6px 0px 0px #218ddd;
-    background-color: #ffffff;
+  <span style="
+    border:1px solid #108cd7;
+    border-radius:12px;
+    padding:10px 20px;
+    display:inline-block;
+    font-weight:bold;
   ">
-  
-    <p style="margin: 0; text-align: center;">
-      <strong>
-        智能驱动跨域攻关&nbsp;&nbsp;德技并修人文润心
-      </strong>
-    </p>
-  
-  </div>
+    智能驱动跨域攻关&nbsp;&nbsp;德技并修人文润心
+  </span>
 
-</div>
+</p>
 
 智能控制与智能系统研究中心导学团队以习近平新时代中国特色社会主义思想为指导，秉承“博雅、求真、立人”核心理念，坚守“四个统一”育人准则，构建“党建引领+科研赋能+协同育人+人文关怀”四位一体建设模式，创新多层级协同培养机制与“研本共建”科创梯队，将思想政治教育与学术科研深度融合，着力培养具有“家国情怀、创新精神、国际视野”的高层次技术人才，为国家战略领域与行业高质量发展提供坚实支撑。
 
