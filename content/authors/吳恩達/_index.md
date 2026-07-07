@@ -14,7 +14,7 @@ authors:
 superuser: false
 
 # Role/position
-role: 副教授（特设教授），系副主任
+role: 副教授/特设教授，系副主任
 
 # Organizations/Affiliations
 organizations:
