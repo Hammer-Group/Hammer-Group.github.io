@@ -15,6 +15,7 @@ sections:
           - 课题组负责人
           - Grad Students
           - Administration
+          - 2026级学生
           - 2025级学生
           - 2024级学生
           - 2023级学生
